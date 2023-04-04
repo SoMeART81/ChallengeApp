@@ -1,21 +1,20 @@
-﻿string name = "Ewa";
-string sex = "Kobieta";
-int age = 17;
+﻿
 
-if (sex == "Mężczyzna" && age < 18)
+int number = 25775;
+string numberInString = number.ToString();
+char[] letters = numberInString.ToArray();
+
+for (int i = 0; i < 10; i++)
 {
-    Console.WriteLine("Niepełnoletni " + sex);
+    int count = 0;
+    
+
+    foreach (char letter in letters)
+    {
+        if ((int)Char.GetNumericValue(letter) == i)
+        {
+            count++;
+        }
+    }
+    Console.WriteLine(i + " => " + count);
 }
-
-else if (age < 30 && sex == "Kobieta")
-{
-    Console.WriteLine(sex + " poniżej 30 lat");
-}
-
-else if (name == "Ewa" && age == 33)
-{
-    Console.WriteLine(name + ", lat " + age);
-}
-
-
-
